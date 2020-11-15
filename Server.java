@@ -26,14 +26,11 @@ public class Server {
             String response = "";
             String line;
 
-//            while((line = reader.readLine()) != null){
-//                System.out.println(line);
-//                response += line;
-//            }
-            response = reader.readLine();
+            while((line = reader.readLine()) != null){
+                response += line;
+                writer.println(response.toUpperCase());
 
-            writer.println(response.toUpperCase());
-            writer.println();
+            }
 
             socket.close();
 
